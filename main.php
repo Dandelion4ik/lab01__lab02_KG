@@ -6,17 +6,6 @@
 
 <script>
 
-    function sign(begin, end) {
-        return (end - begin) / Math.abs(end - begin);
-    }
-
-    function need_switch(x_begin, y_begin, x_end, y_end) {
-        const angle = Math.asin(Math.abs(y_begin - y_end) / Math.sqrt((x_begin - x_end) *
-            (x_begin - x_end) + (y_begin - y_end) * (y_begin - y_end))) * 180 / Math.PI;
-        return (angle > 45 && angle <= 90);
-
-    }
-
     function draw_circle_brezenhelm(radius, x_begin, y_begin) {
         var x = 0;
         var y = radius;
@@ -49,6 +38,17 @@
     function white_strelka(a, b) {
         ctx.fillStyle = '#ffffff'
         ctx.fillRect(a, b, 1, 1)
+    }
+
+    function sign(begin, end) {
+        return (end - begin) / Math.abs(end - begin);
+    }
+
+    function need_switch(x_begin, y_begin, x_end, y_end) {
+        const angle = Math.asin(Math.abs(y_begin - y_end) / Math.sqrt((x_begin - x_end) *
+            (x_begin - x_end) + (y_begin - y_end) * (y_begin - y_end))) * 180 / Math.PI;
+        return (angle > 45 && angle <= 90);
+
     }
 
     function algorithm_brezenhelma(a, b, a_end, b_end, a_begin, b_begin, flag) {
