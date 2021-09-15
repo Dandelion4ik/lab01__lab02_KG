@@ -7,10 +7,10 @@
 <script>
 
     function draw_circle_brezenhelm(radius, x_begin, y_begin) {
-        var x = 0;
-        var y = radius;
-        var F = 3 - 2 * radius;
-        var error = 0;
+        let x = 0;
+        let y = radius;
+        let F = 3 - 2 * radius;
+        let error = 0;
         ctx.fillStyle = '#000000'
         while (y >= 0) {
             ctx.fillRect(x_begin + x, y_begin + y, 1, 1);
